@@ -61,10 +61,8 @@ public class EmployeeService {
     public void updateEmployee(EmployeeDTO  employeeDTO ,Long id){
         Department department=departmentRepository.getById(employeeDTO.getIdDepartment());
         Employee employee= employeeRepository.getById((id));
-        System.out.println(employee.toString());
         Employee newEmployee =EmployeeMapper.toEntity(employee,employeeDTO);
         newEmployee.setDeparment(department);
-        System.out.println(newEmployee.toString());
         employeeRepository.save(newEmployee);
     }
     public void deleteEmployee(Long id){

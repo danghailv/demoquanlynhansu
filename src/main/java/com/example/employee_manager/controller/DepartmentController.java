@@ -33,15 +33,15 @@ public class DepartmentController {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<String> updateUser(@PathVariable Long id){
+    public ResponseEntity<String> updateDepartment(@PathVariable Long id){
         departmentService.deleteDepartment(id);
         return ResponseEntity.ok("xóa thành công");
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<String> updateUser(@RequestBody DepartmentEnterDTO departmentEnterDTO, @PathVariable Long id){
+    public ResponseEntity<String> updateDepartment(@RequestBody DepartmentEnterDTO departmentEnterDTO, @PathVariable Long id){
         departmentService.updateDepartment(departmentEnterDTO,id);
-        return ResponseEntity.ok("Cập nhập thành công nhân viên có id:"+id);
+        return ResponseEntity.ok("Cập nhập thành công phòng ban có id:"+id);
 
     }
 

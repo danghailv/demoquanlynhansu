@@ -47,6 +47,7 @@ public class EmployeeMapper {
         employeeDisplay.setFirstName(employee.getFirstName());
         employeeDisplay.setLastName(employee.getLastName());
         employeeDisplay.setNameDepartment(employee.getDeparment().getName());
+        employeeDisplay.setId(employee.getId());
         return employeeDisplay;
     }
 }

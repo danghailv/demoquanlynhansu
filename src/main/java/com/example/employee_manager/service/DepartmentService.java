@@ -49,6 +49,7 @@ public class DepartmentService {
     public void updateDepartment(DepartmentEnterDTO departmentEnterDTO, Long id) {
         Department department=departmentRepository.getById(id);
         Department newDepartment = DepartmentMapper.toDepartment(department,departmentEnterDTO);
+        departmentRepository.save(newDepartment);
 
     }
 }
